@@ -1,0 +1,6 @@
+{
+  "name": "NX-OS Console & Bootloader Simulator",
+  "description": "Nintendo Switch HOME Menu, Stage 1 & Stage 2 Bootloader, and GPT-partitioned NAND simulator backed by chunked Uint8Array blocks in IndexedDB.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

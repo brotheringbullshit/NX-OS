@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-sans: 'DM Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono-tabular {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes nx-focus-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 3.5px #0AB9E6, 0 0 18px rgba(10, 185, 230, 0.45);
+  }
+  50% {
+    box-shadow: 0 0 0 4.5px #44E5FF, 0 0 24px rgba(68, 229, 255, 0.72);
+  }
+}
+
+.nx-focus-ring {
+  animation: nx-focus-pulse 1.55s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nx-focus-ring {
+    animation: none;
+    box-shadow: 0 0 0 4px #0AB9E6;
+  }
+}
+
+/* Custom sleek scrollbars for internal inspectors and tile carousels */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.thin-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.thin-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.thin-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.35);
+  border-radius: 9999px;
+}
